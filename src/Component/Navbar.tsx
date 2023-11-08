@@ -30,16 +30,16 @@ const Navbar: FC<Props> = (props) => {
       </div>
 
       <div className={`${classes["nav-links"]} ${classes[darkAdjust]}`}>
-        <a onClick={scroll.bind(null, 1)} className={highlighter(0)}>
+        <a onClick={scroll.bind(null, 1)} className={classes[highlighter(0)]}>
           About
         </a>
-        <a onClick={scroll.bind(null, 2)} className={highlighter(1)}>
+        <a onClick={scroll.bind(null, 2)} className={classes[highlighter(1)]}>
           Skills
         </a>
-        <a onClick={scroll.bind(null, 3)} className={highlighter(2)}>
+        <a onClick={scroll.bind(null, 3)} className={classes[highlighter(2)]}>
           Experience
         </a>
-        <a onClick={scroll.bind(null, 4)} className={highlighter(3)}>
+        <a onClick={scroll.bind(null, 4)} className={classes[highlighter(3)]}>
           Contact
         </a>
       </div>
