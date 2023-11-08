@@ -1,0 +1,99 @@
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  float: right;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  margin: 0 22px;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+
+  transition: color 700ms ease-in-out;
+}
+.nav-alt > a {
+  color: white;
+}
+.nav-alt > span {
+  border-top: 2px solid #ffffff;
+}
+.nav-alt-black > span {
+  border-top: 2px solid #000000;
+}
+.nav-alt-black > a {
+  color: black;
+}
+.nav-highlight {
+  color: rgb(232, 12, 12);
+}
+.nav > .nav-links > a:hover {
+  color: rgb(232, 12, 12);
+  transition: color 500ms ease-in-out;
+}
+
+.nav > .nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav .nav-check:checked ~ .nav-btn > label {
+    color: rgb(232, 12, 12);
+  }
+  .nav > .nav-btn > label > span {
+    transition: border-top 700ms ease-in-out;
+    display: block;
+    width: 25px;
+    height: 10px;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    background-color: transparent;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: auto;
+  }
+  .nav > .nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > .nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}

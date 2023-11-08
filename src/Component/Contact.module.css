@@ -1,0 +1,11 @@
+.contact {
+  background-image: linear-gradient(
+    to top,
+    #333434,
+    #616162,
+    #929393,
+    #c7c7c8,
+    #ffffff
+  );
+  height: 100vh;
+}
