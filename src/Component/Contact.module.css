@@ -41,19 +41,8 @@
   }
 }
 @media (max-width: 500px) {
-  .logo {
-    flex-direction: column;
-  }
   .logo img {
     width: 100px;
     height: 100px;
-  }
-  .upwork {
-    transform: translate(100px, 50px);
-  }
-}
-@media (max-width: 370px) {
-  .upwork {
-    transform: translate(40px, 50px);
   }
 }
