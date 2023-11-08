@@ -15,7 +15,7 @@ const Contact: ForwardRefRenderFunction<HTMLElement, Props> = (props, ref) => {
           <a href="https://github.com/AhmedAsif-exe">
             <img src={GitHub} alt="Github Logo" />
           </a>
-          <a href="https://www.upwork.com/" className={classes.upwork}>
+          <a href="https://www.upwork.com/">
             <img src={Upwork} alt="upwork logo" />
           </a>
         </div>

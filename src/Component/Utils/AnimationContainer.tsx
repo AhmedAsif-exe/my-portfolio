@@ -12,7 +12,6 @@ const AnimationContainer: FC<Props> = (props) => {
     if (!inView)
       setTimeout(() => {
         setTempInView(false);
-        console.log(tempInView);
       }, 1000);
     else setTempInView(true);
   }, [inView, tempInView]);

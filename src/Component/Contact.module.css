@@ -28,10 +28,7 @@
   width: 150px;
   height: 150px;
 }
-.logo a:nth-child(2) {
-  width: 200px;
-  height: 200px;
-}
+
 @media (max-width: 800px) {
   .logo {
     width: 80%;
@@ -41,6 +38,15 @@
   }
 }
 @media (max-width: 500px) {
+  .contact > div {
+    font-size: 15px;
+  }
+  .logo {
+    margin: 80px auto;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
   .logo img {
     width: 100px;
     height: 100px;
