@@ -1,13 +1,15 @@
 .experience {
   background-color: white;
   height: 100vh;
+  padding-top: 60px;
 }
 .card {
   background-color: #333434;
   color: white;
-  margin: 100px auto;
+  margin: 30px auto;
   width: 60%;
   text-align: left;
+  min-height: fit-content;
 }
 .card > h2 {
   margin: 0;
@@ -31,4 +33,12 @@
   transform: translateY(-3px);
   transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out,
     border 300ms ease-in-out;
+}
+@media (max-width: 400px) {
+  .card > p {
+    font-size: 15px;
+  }
+  .card {
+    width: 80%;
+  }
 }
