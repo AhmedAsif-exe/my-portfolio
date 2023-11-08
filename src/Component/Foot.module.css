@@ -1,0 +1,11 @@
+.footer {
+  width: 100%;
+  background: #202020;
+  padding: 15px;
+}
+
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
