@@ -1,15 +1,15 @@
 import { ForwardRefRenderFunction, forwardRef } from "react";
 import classes from "./Skills.module.css";
-import Props from "./Utils/PropType";
-import Css from "./Images/Icons/Css.svg";
-import Html from "./Images/Icons/Html.svg";
-import JavaScript from "./Images/Icons/JavaScript.svg";
-import React from "./Images/Icons/React.svg";
-import Node from "./Images/Icons/Node.svg";
-import TypeScript from "./Images/Icons/TypeScript.svg";
-import Cpp from "./Images/Icons/Cpp.svg";
-import Python from "./Images/Icons/Python.svg";
-import AnimationContainer from "./Utils/AnimationContainer";
+import Props from "../../../Utils/Types/PropType";
+import Css from "../../../Utils/Images/Icons/Css.svg";
+import Html from "../../../Utils/Images/Icons/Html.svg";
+import JavaScript from "../../../Utils/Images/Icons/JavaScript.svg";
+import React from "../../../Utils/Images/Icons/React.svg";
+import Node from "../../../Utils/Images/Icons/Node.svg";
+import TypeScript from "../../../Utils/Images/Icons/TypeScript.svg";
+import Cpp from "../../../Utils/Images/Icons/Cpp.svg";
+import Python from "../../../Utils/Images/Icons/Python.svg";
+import AnimationContainer from "../../../Utils/WrapperComponents/AnimationContainer";
 const techIcons = [
   { name: "CSS", icon: Css },
   { name: "HTML", icon: Html },

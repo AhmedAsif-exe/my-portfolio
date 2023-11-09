@@ -46,3 +46,13 @@
     height: 50px;
   }
 }
+@media (max-width: 400px) {
+  .skills p {
+    padding: 2px 5px;
+    margin: 5px;
+  }
+  .skills h2 {
+    font-size: 30px;
+    margin: 20px;
+  }
+}

@@ -1,8 +1,8 @@
 import { forwardRef, ForwardRefRenderFunction } from "react";
 import classes from "./Experience.module.css";
-import Props from "./Utils/PropType";
-import Card from "./Utils/Card";
-import AnimationContainer from "./Utils/AnimationContainer";
+import Props from "../../../Utils/Types/PropType";
+import Card from "../../../Utils/WrapperComponents/Card";
+import AnimationContainer from "../../../Utils/WrapperComponents/AnimationContainer";
 const works = [
   {
     name: "Manga Quest",

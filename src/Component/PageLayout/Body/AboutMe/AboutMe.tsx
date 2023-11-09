@@ -1,10 +1,10 @@
 import classes from "./AboutMe.module.css";
 import { forwardRef, ForwardRefRenderFunction } from "react";
-import AnimationContainer from "./Utils/AnimationContainer";
-import Card from "./Utils/Card";
-import Props from "./Utils/PropType";
+import AnimationContainer from "../../../Utils/WrapperComponents/AnimationContainer";
+import Card from "../../../Utils/WrapperComponents/Card";
+import Props from "../../../Utils/Types/PropType";
 
-import Me from "./Images/Me.jpg";
+import Me from "../../../Utils/Images/Me.jpg";
 
 const AboutMe: ForwardRefRenderFunction<HTMLElement, Props> = (props, ref) => {
   const { inView } = props;

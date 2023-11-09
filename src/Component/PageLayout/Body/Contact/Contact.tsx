@@ -1,9 +1,9 @@
 import { forwardRef, ForwardRefRenderFunction } from "react";
 import classes from "./Contact.module.css";
-import Props from "./Utils/PropType";
-import AnimationContainer from "./Utils/AnimationContainer";
-import GitHub from "./Images/Icons/GitHub.svg";
-import Upwork from "./Images/Icons/UpWork.svg";
+import Props from "../../../Utils/Types/PropType";
+import AnimationContainer from "../../../Utils/WrapperComponents/AnimationContainer";
+import GitHub from "../../../Utils/Images/Icons/GitHub.svg";
+import Upwork from "../../../Utils/Images/Icons/UpWork.svg";
 const Contact: ForwardRefRenderFunction<HTMLElement, Props> = (props, ref) => {
   const { inView } = props;
   return (

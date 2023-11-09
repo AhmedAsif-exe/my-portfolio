@@ -1,21 +1,21 @@
 import "./App.css";
 import React from "react";
-import Navbar from "./Component/Navbar";
-import Title from "./Component/Title";
-import AboutMe from "./Component/AboutMe";
-import Skills from "./Component/Skills";
-import Experience from "./Component/Experience";
-import Contact from "./Component/Contact";
-import useIntersection from "./Component/Hooks/use-intersection";
-import BackToTop from "./Component/BackToTop";
-import Foot from "./Component/Foot";
-import useScroll from "./Component/Hooks/use_scroll";
+import Navbar from "./Component/PageLayout/Navbar/Navbar";
+import Title from "./Component/PageLayout/Body/Title/Title";
+import AboutMe from "./Component/PageLayout/Body/AboutMe/AboutMe";
+import Skills from "./Component/PageLayout/Body/Skills/Skills";
+import Experience from "./Component/PageLayout/Body/Experience/Experience";
+import Contact from "./Component/PageLayout/Body/Contact/Contact";
+import useIntersection from "./Component/Utils/Hooks/use-intersection";
+import BackToTop from "./Component/PageLayout/BackToTop/BackToTop";
+import Foot from "./Component/PageLayout/Foot/Foot";
+import useScroll from "./Component/Utils/Hooks/use_scroll";
 const App: React.FC = () => {
   const { scrolled } = useScroll(window.innerHeight * 0.5);
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5,
+    threshold: 0.75,
   };
   const { targetRef: aboutMeRef, isIntersecting: aboutMeIsIntersecting } =
     useIntersection(options);

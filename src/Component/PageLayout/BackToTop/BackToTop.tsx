@@ -1,5 +1,5 @@
 import classes from "./BackToTop.module.css";
-import backToTop from "./Images/Icons/back-top.svg";
+import backToTop from "../../Utils/Images/Icons/back-top.svg";
 const BackToTop = () => {
   const clickHandler = () => {
     window.scrollTo({
