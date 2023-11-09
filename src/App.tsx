@@ -10,6 +10,7 @@ import useIntersection from "./Component/Utils/Hooks/use-intersection";
 import BackToTop from "./Component/PageLayout/BackToTop/BackToTop";
 import Foot from "./Component/PageLayout/Foot/Foot";
 import useScroll from "./Component/Utils/Hooks/use_scroll";
+
 const App: React.FC = () => {
   const { scrolled } = useScroll(window.innerHeight * 0.5);
   const options = {

@@ -1,0 +1,12 @@
+.icon {
+  color: light-dark(var(--mantine-color-gray-5), var(--mantine-color-dark-3));
+}
+
+.name {
+  font-family: Greycliff CF, var(--mantine-font-family);
+}
+.credentials {
+  width: fit-content;
+  margin: 25px auto;
+  margin-bottom: 15px;
+}
