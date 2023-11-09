@@ -33,7 +33,7 @@ export function BadgeCard(props: Props) {
       bg="#333434"
       mt={20}
     >
-      <Card.Section className={classes.section} mt="md" p={10}>
+      <Card.Section className={classes.section} mt="md" p={15}>
         <Group justify="space-evenly">
           <Text fz="xl" fw={500} c="white">
             {name}
@@ -49,7 +49,7 @@ export function BadgeCard(props: Props) {
       </Card.Section>
 
       <Card.Section className={classes.section}>
-        <Group gap={7} mt={5} mx="auto">
+        <Group gap={7} mt={5} mx="auto" p={16}>
           {features}
         </Group>
       </Card.Section>
