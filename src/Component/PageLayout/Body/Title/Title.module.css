@@ -1,14 +1,6 @@
 .title {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(
-    to top,
-    #333434,
-    #616162,
-    #929393,
-    #c7c7c8,
-    #ffffff
-  );
 }
 .title > h1 {
   color: #0a0909;

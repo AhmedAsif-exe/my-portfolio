@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Component/PageLayout/Navbar/Navbar";
 import Title from "./Component/PageLayout/Body/Title/Title";
 import AboutMe from "./Component/PageLayout/Body/AboutMe/AboutMe";
@@ -12,6 +12,7 @@ import Foot from "./Component/PageLayout/Foot/Foot";
 import useScroll from "./Component/Utils/Hooks/use_scroll";
 
 const App: React.FC = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const { scrolled } = useScroll(window.innerHeight * 0.5);
   const options = {
     root: null,
@@ -33,14 +34,20 @@ const App: React.FC = () => {
     experienceIsIntersecting,
     contactIsIntersecting,
   ];
-
+  const modalHandler = (opened: boolean) => {
+    setModalOpen(opened);
+  };
   return (
     <div className="App">
-      <Navbar isIntersecting={isIntersecting} />
+      <Navbar isIntersecting={isIntersecting} modalOpen={modalOpen} />
       <Title />
       <AboutMe ref={aboutMeRef} inView={aboutMeIsIntersecting} />
       <Skills ref={skillsRef} inView={skillsIsIntersecting} />
-      <Experience ref={experienceRef} inView={experienceIsIntersecting} />
+      <Experience
+        ref={experienceRef}
+        inView={experienceIsIntersecting}
+        modalHandler={modalHandler}
+      />
       <Contact ref={contactRef} inView={contactIsIntersecting} />
       {scrolled && <BackToTop />}
       <Foot />

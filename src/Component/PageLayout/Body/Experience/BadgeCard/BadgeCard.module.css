@@ -33,6 +33,14 @@
 }
 @media (max-width: 600px) {
   .card {
-    width: 80%;
+    width: 90%;
+  }
+}
+.button {
+  all: unset;
+}
+@media (max-width: 400) {
+  .description {
+    font-size: 8px;
   }
 }

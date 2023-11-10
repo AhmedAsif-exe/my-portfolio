@@ -2,6 +2,7 @@ import classes from "./Navbar.module.css";
 import { FC } from "react";
 interface Props {
   isIntersecting: boolean[];
+  modalOpen: boolean;
 }
 const Navbar: FC<Props> = (props) => {
   const scroll = (slidenumber: number) => {
@@ -15,7 +16,7 @@ const Navbar: FC<Props> = (props) => {
     return props.isIntersecting[slide] ? "nav-highlight" : "";
   };
   const darkAdjust =
-    props.isIntersecting[0] || props.isIntersecting[1]
+    props.isIntersecting[0] || props.isIntersecting[1] || props.modalOpen
       ? "nav-alt"
       : "nav-alt-black";
   return (
@@ -30,16 +31,32 @@ const Navbar: FC<Props> = (props) => {
       </div>
 
       <div className={`${classes["nav-links"]} ${classes[darkAdjust]}`}>
-        <a onClick={scroll.bind(null, 1)} className={classes[highlighter(0)]}>
+        <a
+          href="null "
+          onClick={scroll.bind(null, 1)}
+          className={classes[highlighter(0)]}
+        >
           About
         </a>
-        <a onClick={scroll.bind(null, 2)} className={classes[highlighter(1)]}>
+        <a
+          href="null"
+          onClick={scroll.bind(null, 2)}
+          className={classes[highlighter(1)]}
+        >
           Skills
         </a>
-        <a onClick={scroll.bind(null, 3)} className={classes[highlighter(2)]}>
+        <a
+          href="null"
+          onClick={scroll.bind(null, 3)}
+          className={classes[highlighter(2)]}
+        >
           Experience
         </a>
-        <a onClick={scroll.bind(null, 4)} className={classes[highlighter(3)]}>
+        <a
+          href="null"
+          onClick={scroll.bind(null, 4)}
+          className={classes[highlighter(3)]}
+        >
           Contact
         </a>
       </div>

@@ -26,7 +26,7 @@ export default function UserInfoIcons() {
           <Group wrap="nowrap" gap={10} mt={5}>
             <IconPhoneCall stroke={1.5} size="1rem" className={classes.icon} />
             <Text fz="xs" c="#333434">
-              +11 (876) 890 56 23
+              (+92) 321 9555501
             </Text>
           </Group>
         </div>

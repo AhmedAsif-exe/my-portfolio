@@ -1,3 +1,32 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(
+    to top,
+    #333434,
+    #616162,
+    #929393,
+    #c7c7c8,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #c7c7c8,
+    #929393,
+    #616162,
+    #333434,
+    #333434,
+    #333434,
+    #333434,
+    #333434,
+    #333434,
+    #333434,
+    #616162,
+    #929393,
+    #c7c7c8,
+    #ffffff
+  );
+  max-height: fit-content;
 }
