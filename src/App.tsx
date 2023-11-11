@@ -37,6 +37,7 @@ const App: React.FC = () => {
   const modalHandler = (opened: boolean) => {
     setModalOpen(opened);
   };
+
   return (
     <div className="App">
       <Navbar isIntersecting={isIntersecting} modalOpen={modalOpen} />

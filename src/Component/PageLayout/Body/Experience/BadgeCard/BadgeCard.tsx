@@ -10,12 +10,13 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./BadgeCard.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Carousel, Embla, useAnimationOffsetEffect } from "@mantine/carousel";
 
 interface Props {
   modalHandler: (opened: boolean) => void;
   name: string;
-  src: string;
+  src: string[];
   description: string;
   link: string;
   badges: { label: string }[];
@@ -28,7 +29,9 @@ export function BadgeCard(props: Props) {
     </Badge>
   ));
   const [opened, { open, close }] = useDisclosure(false);
+  const [embla, setEmbla] = useState<Embla | null>(null);
 
+  useAnimationOffsetEffect(embla, 200);
   useEffect(() => {
     modalHandler(opened as boolean);
   }, [opened, modalHandler]);
@@ -42,7 +45,13 @@ export function BadgeCard(props: Props) {
         size="xl"
         padding={0}
       >
-        <Image src={src} alt={name} />
+        <Carousel loop getEmblaApi={setEmbla} height="100%">
+          {src.map((link) => (
+            <Carousel.Slide>
+              <Image src={link} alt={name} key={link} />
+            </Carousel.Slide>
+          ))}
+        </Carousel>
       </Modal>
       <Card
         withBorder
@@ -58,7 +67,13 @@ export function BadgeCard(props: Props) {
               {name}
             </Text>
             <button className={classes.button} onClick={open}>
-              <Image src={src} alt={name} height={100} w="auto" fit="contain" />
+              <Image
+                src={src[0]}
+                alt={name}
+                height={100}
+                w="auto"
+                fit="contain"
+              />
             </button>
           </Group>
 

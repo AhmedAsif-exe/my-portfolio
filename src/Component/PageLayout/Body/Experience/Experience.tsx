@@ -18,7 +18,11 @@ const Exprerience: ForwardRefRenderFunction<
       <AnimationContainer inView={inView}>
         <div className={classes.cardholder}>
           {works.map((items) => (
-            <BadgeCard {...items} modalHandler={props.modalHandler} />
+            <BadgeCard
+              {...items}
+              modalHandler={props.modalHandler}
+              key={items.name}
+            />
           ))}
         </div>
       </AnimationContainer>

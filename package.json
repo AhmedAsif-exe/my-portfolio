@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mantine/carousel": "^7.2.1",
     "@mantine/core": "^7.2.1",
     "@mantine/hooks": "^7.2.1",
     "@tabler/icons-react": "^2.40.0",
