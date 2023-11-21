@@ -3,6 +3,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  padding: 25px;
 }
 .basic-info > div {
   height: 100%;
@@ -56,10 +57,11 @@
   }
 }
 @media (max-width: 400px) {
+  .basic-info {
+    padding: 0px;
+  }
   .basic-info img {
     border-radius: 50%;
-    width: 50%;
-    height: 50%;
     margin: 20px auto 10px auto;
 
     box-shadow: 0 8px 8px rgba(255, 255, 255, 0.25);

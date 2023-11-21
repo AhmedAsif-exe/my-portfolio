@@ -17,10 +17,10 @@ const Contact: ForwardRefRenderFunction<HTMLElement, Props> = (props, ref) => {
         <UserInfoIcons />
         <div className={classes.logo}>
           <a href="https://github.com/AhmedAsif-exe">
-            <img src={GitHub} alt="Github Logo" />
+            <img loading="lazy" src={GitHub} alt="Github Logo" />
           </a>
           <a href="https://www.upwork.com/">
-            <img src={Upwork} alt="upwork logo" />
+            <img loading="lazy" src={Upwork} alt="upwork logo" />
           </a>
         </div>
       </AnimationContainer>

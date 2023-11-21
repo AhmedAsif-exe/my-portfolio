@@ -10,7 +10,7 @@ const BackToTop = () => {
   };
   return (
     <button className={classes.button} onClick={clickHandler}>
-      <img src={backToTop} alt="Back To Top" />
+      <img loading="lazy" src={backToTop} alt="Back To Top" />
     </button>
   );
 };

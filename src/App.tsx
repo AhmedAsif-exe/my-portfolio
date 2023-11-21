@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.6,
+    threshold: 0.5,
   };
   const { targetRef: aboutMeRef, isIntersecting: aboutMeIsIntersecting } =
     useIntersection(options);

@@ -12,7 +12,7 @@ const Skills: ForwardRefRenderFunction<HTMLElement, Props> = (props, ref) => {
         <h2>My Trade</h2>
         <div>
           {techIcons.map((item, index) => (
-            <img src={item.icon} key={index} alt={item.name} />
+            <img loading="lazy" src={item.icon} key={index} alt={item.name} />
           ))}
         </div>
         <h2>Others</h2>
