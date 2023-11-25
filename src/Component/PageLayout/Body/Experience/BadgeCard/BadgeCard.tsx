@@ -46,7 +46,7 @@ export function BadgeCard(props: Props) {
         size="xl"
         padding={0}
       >
-        <Carousel loop getEmblaApi={setEmbla} height="100%">
+        <Carousel loop getEmblaApi={setEmbla}>
           {src.map((link) => (
             <Carousel.Slide>
               <Image src={link} alt={name} key={link} />
