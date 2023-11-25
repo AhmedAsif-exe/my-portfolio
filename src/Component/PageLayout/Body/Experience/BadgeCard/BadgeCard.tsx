@@ -46,7 +46,12 @@ export function BadgeCard(props: Props) {
         size="xl"
         padding={0}
       >
-        <Carousel loop getEmblaApi={setEmbla}>
+        <Carousel
+          loop
+          getEmblaApi={setEmbla}
+          height="100%"
+          withControls={false}
+        >
           {src.map((link) => (
             <Carousel.Slide>
               <Image src={link} alt={name} key={link} />
@@ -64,7 +69,7 @@ export function BadgeCard(props: Props) {
       >
         <Card.Section className={classes.section} p={15}>
           <Group justify="space-evenly">
-            <Text fz="xl" fw={500} c="white">
+            <Text fz="xl" fw={500} c="white" className={classes["title"]}>
               {name}
             </Text>
             <button className={classes.button} onClick={open}>

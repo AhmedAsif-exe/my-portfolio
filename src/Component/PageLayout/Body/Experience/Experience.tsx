@@ -38,10 +38,17 @@ const Exprerience: ForwardRefRenderFunction<
   return (
     <section className={classes.experience} ref={ref}>
       <AnimationContainer inView={inView}>
-        <div className={classes.cardholder}>
-          {setCarousel && <Carousel>{cards}</Carousel>}
-          {!setCarousel && cards}
-        </div>
+        {!setCarousel && <div className={classes.cardholder}>{cards}</div>}
+        {setCarousel && (
+          <Carousel
+            height="100%"
+            slideSize="100%"
+            align="start"
+            style={{ width: "100%" }}
+          >
+            {cards}
+          </Carousel>
+        )}
       </AnimationContainer>
     </section>
   );

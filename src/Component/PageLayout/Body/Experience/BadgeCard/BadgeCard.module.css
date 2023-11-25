@@ -10,7 +10,7 @@
 .card:hover {
   box-shadow: 1px 1px #333434ae;
   transform: translateY(-4px);
-  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out;
 }
 .section {
   border-bottom: rem(1px) solid
@@ -39,8 +39,15 @@
 .button {
   all: unset;
 }
-@media (max-width: 400) {
+@media (max-width: 400px) {
   .description {
     font-size: 8px;
+  }
+  .card {
+    width: 90%;
+  }
+  .title,
+  .button {
+    margin-bottom: 4px;
   }
 }
