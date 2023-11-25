@@ -22,25 +22,33 @@ const works = [
     src: [mangaQuest, mangaQuest2, mangaQuest3, mangaQuest4],
     description:
       "I've created an e-commerce website that replicates a manga store, where I can showcase my passion for Japanese literature. The website was developed using React, Node/Express, and Firebase as the tech stack.",
+    github: "https://github.com/AhmedAsif-exe/manga-store",
+
     link: "https://manga-quest.web.app/",
     badges: [
       { label: "React" },
       { label: "Node" },
       { label: "Express" },
       { label: "Firebase" },
+      { label: "CSS" },
+      { label: "JS" },
     ],
   },
   {
     name: "Yelp Camp",
     src: [YelpCamp, YelpCamp2, YelpCamp3],
     description:
-      "I have developed a review application that enables users to both read and write reviews for well-known campsites worldwide. The application was created using Bootstrap for the front-end and Node.js/Express for the back-end and MongoDB as the primary database. While it hasn't been deployed yet, you can assess the code quality by visiting the GitHub repository.",
-    link: "https://github.com/AhmedAsif-exe/YelpCamp",
+      "I have developed a review application that enables users to both read and write reviews for well-known campsites worldwide. Node.js/Express for the back-end and MongoDB as the database. EJS templates were used to serve the websites on the Front-End. While it hasn't been deployed yet, you can assess the code quality by visiting the GitHub repository.",
+    github: "https://github.com/AhmedAsif-exe/YelpCamp",
+    link: null,
     badges: [
       { label: "Css" },
       { label: "Node" },
       { label: "Express" },
       { label: "MongoDB" },
+      { label: "EJS" },
+      { label: "BootStrap" },
+      { label: "JS" },
     ],
   },
 ];

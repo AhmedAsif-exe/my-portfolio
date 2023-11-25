@@ -16,7 +16,7 @@
   font-size: 20px;
   font-weight: 400;
 }
-@media (max-width: 500px) {
+@media (max-width: 770px) {
   .title > h1 {
     font-size: 35px;
   }
@@ -24,44 +24,11 @@
     font-size: 18px;
   }
 }
-
-/*hile (node != root && node->color != Color::black)
-		{
-			if (node->parent->leftChild != node) break;
-
-			Node<T>* sibling = node->parent->rightChild;
-
-			if (sibling && sibling->color == Color::red)
-			{
-				sibling->color = Color::black;
-				node->parent->color = Color::red;
-				sibling->parent= rightRotation(sibling->parent);
-				sibling = node->parent->rightChild;
-			}
-
-			if (sibling && sibling->color == Color::black && (!sibling->leftChild || sibling->leftChild->color == Color::black) && (!sibling->rightChild || sibling->rightChild->color == Color::black))
-			{
-				sibling->color = Color::red;
-				node = node->parent;
-			}
-			else
-			{
-				if (sibling && sibling->color == Color::black && (sibling->leftChild && sibling->leftChild->color == Color::red) && (!sibling->rightChild || sibling->rightChild->color == Color::black))
-				{
-					sibling->leftChild->color = Color::black;
-					sibling->color = Color::red;
-					sibling = rightRotation(sibling);
-					sibling = node->parent->rightChild;
-				}
-
-				sibling->color = node->parent->color;
-				node->parent->color = Color::black;
-				if (sibling->rightChild) sibling->rightChild->color = Color::black;
-				if (sibling->rightChild->rightChild) sibling = leftRotate(sibling);
-				node = root;
-			}
-
-		}
-
-		node->color = Color::black;
-	}*/
+@media (max-width: 500px) {
+  .title > h1 {
+    font-size: 25px;
+  }
+  .title > p {
+    font-size: 10px;
+  }
+}

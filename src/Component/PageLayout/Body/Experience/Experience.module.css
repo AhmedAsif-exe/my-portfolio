@@ -11,11 +11,3 @@
 .cardholder {
   display: flex;
 }
-@media (max-width: 600px) {
-  .cardholder {
-    flex-direction: column;
-  }
-  .experience {
-    padding-top: 20px;
-  }
-}

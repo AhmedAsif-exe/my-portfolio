@@ -10,7 +10,13 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <MantineProvider>
+  <MantineProvider
+    theme={{
+      breakpoints: {
+        xs: "600px",
+      },
+    }}
+  >
     <React.StrictMode>
       <App />
     </React.StrictMode>

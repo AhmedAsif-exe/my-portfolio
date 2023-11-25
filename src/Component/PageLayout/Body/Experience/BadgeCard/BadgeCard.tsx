@@ -18,11 +18,12 @@ interface Props {
   name: string;
   src: string[];
   description: string;
-  link: string;
+  link: string | null;
   badges: { label: string }[];
+  github: string | null;
 }
 export function BadgeCard(props: Props) {
-  const { name, src, description, link, badges, modalHandler } = props;
+  const { name, src, description, link, badges, modalHandler, github } = props;
   const features = badges.map((badge) => (
     <Badge variant="white" key={badge.label}>
       {badge.label}
@@ -84,20 +85,29 @@ export function BadgeCard(props: Props) {
           </Text>
         </Card.Section>
 
-        {window.innerWidth > 500 && (
+        {window.innerWidth > 600 && (
           <Card.Section className={classes.section}>
-            <Group gap={7} mt={2} mx="auto" px={16} className={classes.ic}>
+            <Group gap={7} mt={2} mx="auto" px={16}>
               {features}
             </Group>
           </Card.Section>
         )}
 
         <Group mt="xs">
-          <a href={link} style={{ all: "unset" }}>
-            <Button radius="md" bg="white" c="dark">
-              See Live
-            </Button>
-          </a>
+          {link && (
+            <a href={link} style={{ all: "unset" }}>
+              <Button radius="md" bg="white" c="dark">
+                See Live
+              </Button>
+            </a>
+          )}
+          {github && (
+            <a href={github} style={{ all: "unset" }}>
+              <Button radius="md" bg="white" c="dark">
+                See Repository
+              </Button>
+            </a>
+          )}
         </Group>
       </Card>
     </>
