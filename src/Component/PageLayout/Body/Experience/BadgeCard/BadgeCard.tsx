@@ -10,11 +10,10 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./BadgeCard.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Carousel, Embla, useAnimationOffsetEffect } from "@mantine/carousel";
 
 interface Props {
-  modalHandler: (opened: boolean) => void;
   name: string;
   src: string[];
   description: string;
@@ -23,7 +22,7 @@ interface Props {
   github: string | null;
 }
 export function BadgeCard(props: Props) {
-  const { name, src, description, link, badges, modalHandler, github } = props;
+  const { name, src, description, link, badges, github } = props;
   const features = badges.map((badge) => (
     <Badge variant="white" key={badge.label}>
       {badge.label}
@@ -33,9 +32,7 @@ export function BadgeCard(props: Props) {
   const [embla, setEmbla] = useState<Embla | null>(null);
 
   useAnimationOffsetEffect(embla, 200);
-  useEffect(() => {
-    modalHandler(opened as boolean);
-  }, [opened, modalHandler]);
+
   return (
     <>
       <Modal

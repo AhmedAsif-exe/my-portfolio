@@ -5,34 +5,21 @@ import AnimationContainer from "../../../Utils/WrapperComponents/AnimationContai
 import { BadgeCard } from "./BadgeCard/BadgeCard";
 import { works } from "../../../Utils/DataFile";
 import { Carousel } from "@mantine/carousel";
-interface ModalHandlerFunction {
-  modalHandler: (opened: boolean) => void;
-}
-const Exprerience: ForwardRefRenderFunction<
-  HTMLElement,
-  Props & ModalHandlerFunction
-> = (props, ref) => {
+
+const Exprerience: ForwardRefRenderFunction<HTMLElement, Props> = (
+  props,
+  ref
+) => {
   const { inView } = props;
   const setCarousel = window.innerWidth < 600;
   const cards = works.map((items) => {
     if (setCarousel)
       return (
-        <Carousel.Slide>
-          <BadgeCard
-            {...items}
-            modalHandler={props.modalHandler}
-            key={items.name}
-          />
+        <Carousel.Slide key={items.name}>
+          <BadgeCard {...items} key={items.name} />
         </Carousel.Slide>
       );
-    else
-      return (
-        <BadgeCard
-          {...items}
-          modalHandler={props.modalHandler}
-          key={items.name}
-        />
-      );
+    else return <BadgeCard {...items} key={items.name} />;
   });
 
   return (

@@ -2,7 +2,6 @@ import classes from "./Navbar.module.css";
 import { FC } from "react";
 interface Props {
   isIntersecting: boolean[];
-  modalOpen: boolean;
 }
 const Navbar: FC<Props> = (props) => {
   const scroll = (slidenumber: number) => {
@@ -16,7 +15,7 @@ const Navbar: FC<Props> = (props) => {
     return props.isIntersecting[slide] ? "nav-highlight" : "";
   };
   const darkAdjust =
-    props.isIntersecting[0] || props.isIntersecting[1] || props.modalOpen
+    props.isIntersecting[0] || props.isIntersecting[1]
       ? "nav-alt"
       : "nav-alt-black";
   return (

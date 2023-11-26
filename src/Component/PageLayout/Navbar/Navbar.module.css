@@ -58,6 +58,7 @@
     position: absolute;
     right: 0px;
     top: 0px;
+    z-index: 100;
   }
   .nav > .nav-btn > label {
     display: inline-block;
@@ -82,8 +83,9 @@
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 50px;
+    /* top: 50px; */
     left: 0px;
+    background-color: #0000007d;
   }
   .nav > .nav-links > a {
     display: block;
@@ -93,7 +95,10 @@
     height: 0px;
   }
   .nav > .nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
+    /* height: calc(100vh - 50px); */
+    height: fit-content;
     overflow-y: auto;
+    border-radius: 10px;
+    padding: 10px;
   }
 }
