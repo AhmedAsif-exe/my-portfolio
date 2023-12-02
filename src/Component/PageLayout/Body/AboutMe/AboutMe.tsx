@@ -13,7 +13,7 @@ const AboutMe: ForwardRefRenderFunction<HTMLElement, Props> = (props, ref) => {
     <section className={classes["basic-info"]} ref={ref}>
       <AnimationContainer inView={inView}>
         <img loading="lazy" src={Me} alt="of the creator" />
-        <p>Muhammad Ahmed Asif</p>
+        <p>M. Ahmed Asif</p>
         <Card className={classes["card"]}>
           <p>
             Hello and welcome! I'm a digital designer and web developer based in

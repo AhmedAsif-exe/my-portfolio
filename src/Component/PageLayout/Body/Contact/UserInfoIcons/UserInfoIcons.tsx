@@ -13,7 +13,7 @@ export default function UserInfoIcons() {
           </Text>
 
           <Text fz="lg" fw={500} className={classes.name}>
-            Muhammad Ahmed Asif
+            M. Ahmed Asif
           </Text>
 
           <Group wrap="nowrap" gap={10} mt={3}>
