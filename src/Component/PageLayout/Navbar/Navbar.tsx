@@ -1,9 +1,10 @@
 import classes from "./Navbar.module.css";
-import { FC } from "react";
+import { FC, useState } from "react";
 interface Props {
   isIntersecting: boolean[];
 }
 const Navbar: FC<Props> = (props) => {
+  const [hamburger, setHamburger] = useState(window.innerWidth <= 600);
   const scroll = (slidenumber: number) => {
     window.scrollTo({
       top: slidenumber * window.innerHeight,
@@ -15,14 +16,18 @@ const Navbar: FC<Props> = (props) => {
     return props.isIntersecting[slide] ? "nav-highlight" : "";
   };
   const darkAdjust =
-    props.isIntersecting[0] || props.isIntersecting[1]
+    props.isIntersecting[0] || props.isIntersecting[1] || !hamburger
       ? "nav-alt"
       : "nav-alt-black";
   return (
     <header className={classes.nav}>
       <input className={classes["nav-check"]} type="checkbox" id="nav-check" />
       <div className={classes["nav-btn"]}>
-        <label htmlFor={"nav-check"} className={`${classes[darkAdjust]}`}>
+        <label
+          onClick={() => setHamburger((hamburger) => !hamburger)}
+          htmlFor={"nav-check"}
+          className={`${classes[darkAdjust]}`}
+        >
           <span></span>
           <span></span>
           <span></span>

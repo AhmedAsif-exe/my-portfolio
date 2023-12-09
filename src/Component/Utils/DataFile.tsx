@@ -15,7 +15,7 @@ import Node from "./Images/Icons/Node.svg";
 import TypeScript from "./Images/Icons/TypeScript.svg";
 import Cpp from "./Images/Icons/Cpp.svg";
 import Python from "./Images/Icons/Python.svg";
-
+import Next from "./Images/Icons/Next.svg";
 const works = [
   {
     name: "Manga Quest",
@@ -62,6 +62,7 @@ const techIcons = [
   { name: "TypeScript", icon: TypeScript },
   { name: "C++", icon: Cpp },
   { name: "Python", icon: Python },
+  { name: "Next", icon: Next },
 ];
 
 const otherStuff = [
